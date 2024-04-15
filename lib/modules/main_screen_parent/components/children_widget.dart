@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scm/shared/styles/style.dart';
 
 import '../../main_screen_child/main_screen_child.dart';
 
@@ -45,7 +46,7 @@ class ChildrenWidget  extends StatelessWidget {
                       CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Hasnaa ahmed',
+                          'Hasnaa Ahmed elhefnawy',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -53,21 +54,17 @@ class ChildrenWidget  extends StatelessWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
+                        Spacer(),
                         Text('Grade 5')
                       ],
                     ),
                   ),
                 ),
+                Spacer(),
                 // the balance here
                 Text(
                   '150 LE',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style:Styles.styleBoldwhite15,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 )

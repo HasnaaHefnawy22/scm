@@ -40,6 +40,14 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     height: 0,
   );
+  static const TextStyle styleBoldwhite15 = TextStyle(
+    color: Colors.white,
+    fontSize: 15,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
+
   static const TextStyle styleBold15 = TextStyle(
     color: Colors.black,
     fontSize: 15,
@@ -47,11 +55,31 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     height: 0,
   );
+  static const TextStyle style15 = TextStyle(
+    color: Colors.black,
+    fontSize: 15,
+    fontFamily: 'Inter',
+    height: 0,
+  );
+  static const TextStyle styleGray15 = TextStyle(
+    color: kPrimarygrayColor,
+    fontSize: 15,
+    fontFamily: 'Inter',
+    height: 0,
+  );
+
   static const TextStyle style24 = TextStyle(
     color: Colors.black,
     fontSize: 24,
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
+    height: 0,
+  );
+  static const TextStyle style40 = TextStyle(
+    color: Colors.black,
+    fontSize: 40,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.bold,
     height: 0,
   );
 
@@ -78,5 +106,23 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
     height: 0,
   );
-
 }
+
+//////////////////helmy/////////////
+const kDefaultPadding = EdgeInsets.symmetric(horizontal: 30);
+TextStyle titleText = const TextStyle(
+    color: Colors.black,
+    fontSize: 32,
+    fontWeight: FontWeight.w700
+);
+TextStyle subTitle = const TextStyle(
+    color: kPrimarygrayColor,
+    fontSize: 18,
+    fontWeight: FontWeight.w500
+);
+
+TextStyle textButton = const TextStyle(
+  color: Colors.black,
+  fontSize: 18,
+  fontWeight: FontWeight.w700,
+);

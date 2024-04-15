@@ -17,13 +17,13 @@ class ProfileWidget  extends StatelessWidget {
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(top: 20.0),
+          margin: const EdgeInsets.only(top: defaultPadding),
           height: 250.0,
           child: Stack(
             children: <Widget>[
               Container(
                 padding: const EdgeInsets.only(
-                    top: 60.0, left: 40.0, right: 40.0, bottom: 10.0),
+                    top: 60.0, left: defaultPadding, right: defaultPadding, bottom: 10.0),
                 child: Material(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
@@ -32,18 +32,21 @@ class ProfileWidget  extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       const SizedBox(
-                        height: 50.0,
+                        height: 40.0,
                       ),
                       //name of parent
                       Text(
                         "Ahmed Mohamed Elhefnawy",
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       const SizedBox(
-                        height: 5.0,
+                        height: 3.0,
                       ),
                       //name of the school
-                      const Text("Maria Ozilea School"),
+                      const Text("Maria Ozilea School",maxLines: 1,
+                        overflow: TextOverflow.ellipsis,),
                       const SizedBox(
                         height: 5.0,
                       ),

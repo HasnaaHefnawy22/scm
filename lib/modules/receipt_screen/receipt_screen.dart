@@ -19,7 +19,7 @@ class ReceiptScreen extends StatelessWidget {
       appBar:  buildAppBar(title: 'Receipt',context: context),
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 15, bottom: 30, left: 20, right: 20),
+            const EdgeInsets.only(top: 15, bottom: 30, left: defaultPadding, right: defaultPadding),
         child: Container(
           color: kPrimarywhiteColor,
           height: double.infinity,
@@ -27,17 +27,16 @@ class ReceiptScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Text(
                   'Maria Ozilea',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: Styles.style25,
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
+                padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                 child: Container(
                   width: double.infinity,
                   child: Column(
@@ -55,7 +54,7 @@ class ReceiptScreen extends StatelessWidget {
                         color: Colors.black,
                       ),
                       Container(
-                          height: 450,
+                          height: 410,
                           child: SingleChildScrollView(
                               child: ItemWidget(
                                   itemName: "Juhayna Mix berry Milk",
@@ -65,9 +64,7 @@ class ReceiptScreen extends StatelessWidget {
                       Divider(
                         color: Colors.black,
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+
                       PaymentReceiptWidget(totalMoney: '270', paymentBy: 'wallet'),
                     ],
                   ),

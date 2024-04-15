@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import '../../shared/styles/color.dart';
+import '../../shared/styles/style.dart';
 import '../main_screen_parent/components/transaction_widget.dart';
-import 'components/child_icon.dart';
 import 'components/new_child_item.dart';
 
 class MainScreenChild extends StatelessWidget {
@@ -54,6 +54,8 @@ class MainScreenChild extends StatelessWidget {
                             //name of parent
                             Text(
                               "Hasnaa Mohamed Elhefnawy",
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                   color: kPrimarywhiteColor,
                                   fontWeight: FontWeight.bold,
@@ -65,6 +67,8 @@ class MainScreenChild extends StatelessWidget {
                             //name of the school
                             const Text(
                               "Maria Ozilea School",
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(color: kPrimarywhiteColor),
                             ),
                             const SizedBox(
@@ -147,37 +151,17 @@ class MainScreenChild extends StatelessWidget {
               NewChildItem(),
               //ChildIcon(),
               //last transactions
-              Stack(
-                children: [
-                  Container(
-                    height: 30,
-                    width: double.infinity,
-                  ),
-                  Positioned(
-                    left: 20,
-                    child: Text(
-                      "Last Transactions",
-                      style: TextStyle(
-                        fontSize: 23,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    right: 20,
-                    top: 5,
-                    child: Text(
-                      "View all",
-                      style: TextStyle(color: Colors.red, fontSize: 15),
-                    ),
-                  )
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: defaultPadding),
+                child: Text(
+                    "Last Transactions",style: Styles.style22
+                ),
               ),
               ///////////////////////////////////////////first transaction////////////////////////////////////////////////////////////
-              SizedBox(
-                height: 10,
+              Expanded(
+                child: SingleChildScrollView(
+                    child: LastTransactionWidget()),
               ),
-              LastTransactionWidget(),
               ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             ]),
       ),
