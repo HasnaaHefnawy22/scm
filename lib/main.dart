@@ -3,6 +3,7 @@ import 'package:scm/modules/login/login_screen.dart';
 import 'package:scm/shared/styles/color.dart';
 
 import 'modules/loading/loading_screen.dart';
+import 'modules/login_new/login_new.dart';
 import 'modules/reset_password_screens/home.dart';
 import 'modules/teacher/teacher_main_screen.dart';
 
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
             ),
           )),
       debugShowCheckedModeBanner: false,
-      home: ResetPasswordMainScreen(),
+      home: LoginNew(),
     );
   }
 }

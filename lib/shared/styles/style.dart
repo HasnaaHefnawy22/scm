@@ -109,18 +109,6 @@ abstract class Styles {
 }
 
 //////////////////helmy/////////////
-const kDefaultPadding = EdgeInsets.symmetric(horizontal: 30);
-TextStyle titleText = const TextStyle(
-    color: Colors.black,
-    fontSize: 32,
-    fontWeight: FontWeight.w700
-);
-TextStyle subTitle = const TextStyle(
-    color: kPrimarygrayColor,
-    fontSize: 18,
-    fontWeight: FontWeight.w500
-);
-
 TextStyle textButton = const TextStyle(
   color: Colors.black,
   fontSize: 18,
