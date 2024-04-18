@@ -44,7 +44,12 @@ class _NewChildItemState extends State<NewChildItem> {
             Expanded(
                 child: defultItem(
                     onTTap: () {
-                      showBottomSheet(
+                      showModalBottomSheet(
+                        //isScrollControlled: true,
+                        // backgroundColor: kPrimaryLightColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(top: Radius.circular(30))
+                        ),
                           context: context,
                           builder: (BuildContext context) {
                             return BottomSheetScreen();

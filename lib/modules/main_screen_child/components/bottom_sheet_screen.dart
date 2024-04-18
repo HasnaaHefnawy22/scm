@@ -11,18 +11,12 @@ class BottomSheetScreen extends StatefulWidget {
 }
 
 class _BottomSheetScreenState extends State<BottomSheetScreen> {
-  double limit = 0;
+  double limit = 20;
   @override
   Widget build(BuildContext context) {
     return  Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-          color: kPrimaryLightColor,
-
-      ),
       width: double.infinity,
       height: 300,
-
       child: Padding(
         padding: const EdgeInsets.all(defaultPadding),
         child: Column(
