@@ -19,7 +19,12 @@ class MainScreenChild extends StatelessWidget {
     return BlocProvider(
       create: (BuildContext context)=>ChildCubit(),
       child: BlocConsumer<ChildCubit,ChildStates>(
-        listener: (context,state){},
+        listener: (context,state){
+          if (state is ChildInitialState) print('Child Initial State');
+          if (state is ChildChangeState) print('Child Change State');
+          if (state is ChildLimitState) print('Child Limit State ${state.limit.round()}');
+
+        },
         builder: (context,state){
           return Scaffold(
             body: Expanded(

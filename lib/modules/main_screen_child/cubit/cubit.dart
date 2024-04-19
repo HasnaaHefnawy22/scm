@@ -9,4 +9,11 @@ class ChildCubit extends Cubit<ChildStates> {
 
   static ChildCubit get(context)=>BlocProvider.of(context);
 
+  double limit = 20 ;
+
+  void limitValue(value){
+    limit=value;
+    emit(ChildLimitState(limit));
+  }
+
 }
