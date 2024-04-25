@@ -16,7 +16,7 @@ class NewMainScreenParent extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const ProfileWidget(),
+          ProfileWidget(),
           Expanded(
             child: SingleChildScrollView(
               child: Column(

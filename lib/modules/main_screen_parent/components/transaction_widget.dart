@@ -5,8 +5,11 @@ import '../../receipt_screen/receipt_screen.dart';
 
 
 class LastTransactionWidget  extends StatelessWidget {
-  const LastTransactionWidget({super.key});
-
+  LastTransactionWidget({super.key});
+  List<String> transactions=['buying process from Hasnaa','buying process from Aliaa','buying process from Aliaa','buying process from hasnaa','buying process from Aliaa'];
+  List<String> payment=['by cash','by cash','by wallet','by wallet','by wallet'];
+  List<String> dateTransaction=['08/04/2024','08/04/2024','3/04/2024','02/04/2024','28/03/2024'];
+  List<double> money=[10,7,15.5,2.5,9.5];
   @override
   Widget build(BuildContext context) {
     return  ListView.separated(
@@ -14,7 +17,7 @@ class LastTransactionWidget  extends StatelessWidget {
       separatorBuilder: (context,index)=>SizedBox(height: 10,),
       physics: const NeverScrollableScrollPhysics(),
       // number of children
-      itemCount: 10, //collections.length,
+      itemCount: 5, //collections.length,
       itemBuilder: (BuildContext context, int index) {
         return MaterialButton(onPressed: () {
           Navigator.push(
@@ -51,7 +54,7 @@ class LastTransactionWidget  extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'buying process from hasnaa',
+                    transactions[index],
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -60,7 +63,7 @@ class LastTransactionWidget  extends StatelessWidget {
 
                     children: [
                       Text(
-                        'by cash',
+                        payment[index],
 
                         style: TextStyle(color: Colors.grey.shade600, fontSize: 12),
                       ),
@@ -68,7 +71,7 @@ class LastTransactionWidget  extends StatelessWidget {
                         width: 15,
                       ),
                       Text(
-                        '08/04/2001',
+                        dateTransaction[index],
                         style: TextStyle(
                             color: Colors.grey.shade600, fontSize: 12),
                       ),
@@ -78,7 +81,7 @@ class LastTransactionWidget  extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                '15.0 EGP',
+                '${money[index]} EGP',
                 style: Styles.styleBold15,
               )
             ],),

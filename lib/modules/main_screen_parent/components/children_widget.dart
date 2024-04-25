@@ -4,7 +4,10 @@ import 'package:scm/shared/styles/style.dart';
 import '../../main_screen_child/main_screen_child.dart';
 
 class ChildrenWidget  extends StatelessWidget {
-  const ChildrenWidget({super.key});
+  ChildrenWidget({super.key});
+  List<dynamic> studentName=[['Aliaa Ahmed Mohamed','Hasnaa Ahmed Mohamed'],['Layla Ahmed Abdelaker','Anas Ahmed Abdelaker'],['Gamela Shady Ashrf','Mohab Shady Ashrf']];
+  List<dynamic> studentBalance=[[150.50,30.00],[70.00,103.50],[242.00,170.50]];
+  List<String> grade=['Grade 5','Grade 6'];
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +26,7 @@ class ChildrenWidget  extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const MainScreenChild()));
+                      builder: (context) => MainScreenChild()));
             },
             child: Row(
               mainAxisSize: MainAxisSize.max,
@@ -46,7 +49,7 @@ class ChildrenWidget  extends StatelessWidget {
                       CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Hasnaa Ahmed elhefnawy',
+                          studentName[0][index],
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -55,7 +58,7 @@ class ChildrenWidget  extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                         Spacer(),
-                        Text('Grade 5')
+                        Text(grade[index])
                       ],
                     ),
                   ),
@@ -63,7 +66,7 @@ class ChildrenWidget  extends StatelessWidget {
                 Spacer(),
                 // the balance here
                 Text(
-                  '150 LE',
+                  '${studentBalance[0][index]} EGP',
                   style:Styles.styleBoldwhite15,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,

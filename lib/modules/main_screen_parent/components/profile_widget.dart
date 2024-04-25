@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../shared/styles/color.dart';
 
 class ProfileWidget  extends StatelessWidget {
-  const ProfileWidget({super.key,});
-
+  ProfileWidget({super.key,});
+  List<String> parentName=['Ahmed Mohamed Elhefnawy','Ahmed Abdelaker','Shady Ashrf'];
+  List<String> schoolName=['Maria Ozilea School','Nabwya Mosa','EGC'];
+  List<dynamic> studentBalance=[[150.50,30.00],[70.00,103.50],[242.00,170.50]];
   @override
   Widget build(BuildContext context) {
     return  Stack(
@@ -36,7 +38,7 @@ class ProfileWidget  extends StatelessWidget {
                       ),
                       //name of parent
                       Text(
-                        "Ahmed Mohamed Elhefnawy",
+                        parentName[0],
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.titleLarge,
@@ -45,7 +47,7 @@ class ProfileWidget  extends StatelessWidget {
                         height: 3.0,
                       ),
                       //name of the school
-                      const Text("Maria Ozilea School",maxLines: 1,
+                       Text(schoolName[0],maxLines: 1,
                         overflow: TextOverflow.ellipsis,),
                       const SizedBox(
                         height: 5.0,
@@ -59,7 +61,7 @@ class ProfileWidget  extends StatelessWidget {
                             Expanded(
                               child: ListTile(
                                 title: const Text(
-                                  "300.50 EGP",
+                                  "180.5 EGP",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold),
@@ -84,15 +86,16 @@ class ProfileWidget  extends StatelessWidget {
                   children: <Widget>[
                     Material(
                       elevation: 5.0,
-                      shape: const CircleBorder(),
+                      shape: CircleBorder(),
                       child: CircleAvatar(
                         radius: 40.0,
-                        //backgroundImage: Image(image: AssetImage("assets/images/girl.png"),) ,
+                        //backgroundImage:  AssetImage("assets/last/bussiness-man.png") ,
                       ),
                     ),
                   ],
                 ),
               ),
+              //Expanded(child: Image.asset('assets/last/man.png',width:15),)
             ],
           ),
         )

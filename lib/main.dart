@@ -1,5 +1,7 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:scm/modules/login/login_screen.dart';
+import 'package:scm/shared/bloc_observer.dart';
 import 'package:scm/shared/styles/color.dart';
 
 import 'modules/loading/loading_screen.dart';
@@ -9,6 +11,7 @@ import 'modules/reset_password_screens/home.dart';
 import 'modules/teacher/teacher_main_screen.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
@@ -47,7 +50,7 @@ class MyApp extends StatelessWidget {
             ),
           )),
       debugShowCheckedModeBanner: false,
-      home: LoginNew(),
+      home: SplashScreen(),
     );
   }
 }

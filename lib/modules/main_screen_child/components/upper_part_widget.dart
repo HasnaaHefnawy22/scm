@@ -7,8 +7,8 @@ import '../cubit/cubit.dart';
 import '../cubit/states.dart';
 
 class UpperPartWidget extends StatelessWidget {
-  const UpperPartWidget({super.key});
-
+  UpperPartWidget({super.key});
+  List<dynamic> studentName=[['Aliaa Ahmed Mohamed','Hasnaa Ahmed Mohamed'],['Layla Ahmed Abdelaker','Anas Ahmed Abdelaker'],['Gamela Shady Ashrf','Mohab Shady Ashrf']];
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -80,7 +80,7 @@ class UpperPartWidget extends StatelessWidget {
                               Expanded(
                                 child: ListTile(
                                   title: const Text(
-                                    "150 EGP",
+                                    "30 EGP",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,

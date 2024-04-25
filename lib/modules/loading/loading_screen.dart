@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../shared/styles/color.dart';
 import '../login/login_screen.dart';
+import '../login_new/login_new.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(Duration(seconds: 3),(){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginNew()));
     });
 
   }
