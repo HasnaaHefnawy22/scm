@@ -7,20 +7,20 @@ import '../cubit/cubit.dart';
 import '../cubit/states.dart';
 
 
-class LastTransactionWidget  extends StatelessWidget {
-  LastTransactionWidget({super.key});
-  List<String> transactions=['buying process from Hasnaa','buying process from Aliaa','buying process from Aliaa','buying process from Hasnaa','buying process from Aliaa'];
-  List<String> payment=['by cash','by cash','by wallet','by wallet','by wallet'];
-  List<String> dateTransaction=['08/04/2024','08/04/2024','3/04/2024','02/04/2024','28/03/2024'];
-  List<double> money=[10,7,15.5,2.5,9.5];
+class LastTransactionChildWidget  extends StatelessWidget {
+  LastTransactionChildWidget({super.key});
+  List<String> transactions=['buying process from Hasnaa','buying process from Hasnaa','buying process from Hasnaa','buying process from Hasnaa','buying process from Hasnaa'];
+  List<String> payment=['by cash','by wallet','by cash','by wallet','by wallet'];
+  List<String> dateTransaction=['08/04/2024','3/04/2024','27/03/2024','22/03/2024','21/03/2024'];
+  List<double> money=[10,2.5,10,12.5,8.5];
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => ParentCubit(),
-      child: BlocConsumer<ParentCubit, ParentStates>(
-        listener: (BuildContext context, ParentStates state) {
-          if (state is ParentInitialState) print('Parent Initial State');
-          if (state is ParentChangeState) print('Parent Change State');
+      create: (BuildContext context) => ChildCubit(),
+      child: BlocConsumer<ChildCubit, ChildStates>(
+        listener: (BuildContext context, ChildStates state) {
+          if (state is ChildInitialState) print('Parent Initial State');
+          if (state is ChildChangeState) print('Parent Change State');
         },
         builder: (context, state) {
           return ListView.separated(

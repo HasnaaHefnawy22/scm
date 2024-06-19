@@ -96,6 +96,7 @@ class _LoginNew extends State<LoginNew> {
                                               196, 135, 198, .3)))),
                               child: TextField(
                                 decoration: InputDecoration(
+
                                     border: InputBorder.none,
                                     hintText: "User ID",
                                     hintStyle:

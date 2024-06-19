@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:scm/modules/payment_Screens/thank_you_view.dart';
 
+import '../../shared/styles/color.dart';
 import 'custom_credit_card.dart';
 
 class PaymentDetailsViewBody extends StatefulWidget {
@@ -34,7 +35,11 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 12, left: 16, right: 16),
-                child: TextButton(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      foregroundColor: kPrimarywhiteColor,
+                      backgroundColor: Color(0xFF033E6E)),
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
@@ -48,7 +53,7 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
                       setState(() {});
                     }
                   },
-                  child: Text('Payment'),
+                  child: Text('Confirm'),
                 ),
               )),
         ),

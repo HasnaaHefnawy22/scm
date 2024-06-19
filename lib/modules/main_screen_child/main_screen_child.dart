@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../shared/styles/color.dart';
 import '../../shared/styles/style.dart';
 import '../main_screen_parent/components/transaction_widget.dart';
+import 'components/child_transaction.dart';
 import 'components/new_child_item.dart';
 import 'components/upper_part_widget.dart';
 import 'cubit/cubit.dart';
@@ -40,7 +41,7 @@ class MainScreenChild extends StatelessWidget {
                     //ChildIcon(),
                     //last transactions
                     Padding(
-                      padding: const EdgeInsets.only(left: defaultPadding),
+                      padding: const EdgeInsets.only(left: defaultPadding,bottom: defaultPadding),
                       child: Text(
                           "Last Transactions",style: Styles.style22
                       ),
@@ -48,7 +49,7 @@ class MainScreenChild extends StatelessWidget {
                     ///////////////////////////////////////////first transaction////////////////////////////////////////////////////////////
                     Expanded(
                       child: SingleChildScrollView(
-                          child: LastTransactionWidget()),
+                          child: LastTransactionChildWidget()),
                     ),
                     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                   ]),

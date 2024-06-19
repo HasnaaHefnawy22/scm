@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           ),
           inputDecorationTheme: const InputDecorationTheme(
             filled: true,
-            fillColor: kPrimaryLightColor,
+            fillColor: kPrimarywhiteColor,
             iconColor: kPrimaryColor,
             prefixIconColor: kPrimaryColor,
             suffixIconColor: kPrimaryColor,

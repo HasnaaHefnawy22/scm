@@ -22,7 +22,7 @@ class PaymentDetailsView extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: kPrimaryColor,
+        backgroundColor: Color(0xFF033E6E),
         elevation: 0,
         centerTitle: true,
         title: Text(
