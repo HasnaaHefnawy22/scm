@@ -8,6 +8,7 @@ import 'modules/loading/loading_screen.dart';
 import 'modules/login_new/login_new.dart';
 import 'modules/main_screen_child/main_screen_child.dart';
 import 'modules/reset_password_screens/home.dart';
+import 'modules/teacher/homework.dart';
 import 'modules/teacher/teacher_main_screen.dart';
 
 void main() {
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
           inputDecorationTheme: const InputDecorationTheme(
             filled: true,
-            fillColor: kPrimarywhiteColor,
+            fillColor: kPrimaryLightColor,
             iconColor: kPrimaryColor,
             prefixIconColor: kPrimaryColor,
             suffixIconColor: kPrimaryColor,
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
             ),
           )),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

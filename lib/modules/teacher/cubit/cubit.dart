@@ -9,3 +9,4 @@ class TeacherCubit extends Cubit<TeacherStates> {
   static TeacherCubit get(context)=>BlocProvider.of(context);
 
 }
+// TeacherCubit.get(context).function();

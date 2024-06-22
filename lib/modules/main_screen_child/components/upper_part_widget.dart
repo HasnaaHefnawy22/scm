@@ -104,7 +104,7 @@ class UpperPartWidget extends StatelessWidget {
                               Expanded(
                                 child: ListTile(
                                   title: Text(
-                                    '${ChildCubit.get(context).limit.round()} EGP',
+                                    '${ChildCubit.get(context).limitSave.round()} EGP',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,

@@ -69,7 +69,9 @@ class BottomSheetScreen extends StatelessWidget {
                     MainAxisAlignment.center,
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          ChildCubit.get(context).limitValueSave();
+                        },
                         child: Text("Save"),
                         style: ElevatedButton.styleFrom(
                           minimumSize: const Size(150, 56),

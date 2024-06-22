@@ -11,3 +11,11 @@ class ChildLimitState extends ChildStates{
   ChildLimitState(this.limit);
 
 }
+
+class ChildLimitSaveState extends ChildStates{
+
+  final double limitSave;
+
+  ChildLimitSaveState(this.limitSave);
+
+}
