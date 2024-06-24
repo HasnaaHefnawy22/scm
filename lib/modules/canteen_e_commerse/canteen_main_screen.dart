@@ -30,6 +30,16 @@ class _CanteenMainScreenState extends State<CanteenMainScreen> {
     // 'Cake 🍰',
     // 'Biscuts 🍪',
   ];
+  List<String> prouductName = ['Juhayna Mix berry',
+    'Juhayna Orange','Juhayna Mango','Juhayna Apple','Juhayna Chocolate'];
+  List prouductImage = [
+    'assets/items/mixBarry.jpeg',
+    'assets/items/orange.jpeg',
+    'assets/items/mango.jpeg',
+    'assets/items/apple.jpeg',
+    'assets/items/mixChocolet.png'
+  ];
+
   int _selectedSection = 0;
   final List<bool> isBlocked = List.generate(70, (_) => false);
 
@@ -73,7 +83,6 @@ class _CanteenMainScreenState extends State<CanteenMainScreen> {
               style:Styles.styleGray15,
             ),
           ),
-
           // Section chips
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -129,7 +138,7 @@ class _CanteenMainScreenState extends State<CanteenMainScreen> {
                   ListView.builder(
                     shrinkWrap: true,
                     physics: BouncingScrollPhysics(),
-                    itemCount: 10,
+                    itemCount: 5,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.symmetric(
@@ -142,17 +151,23 @@ class _CanteenMainScreenState extends State<CanteenMainScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const CircleAvatar(
-                                  radius: 60,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj8jG6wRlt4ftSCKawftxxgayByDUJG7W2JQ&s'),
+                                Container(
+                                    child: Image.asset(prouductImage[index],fit: BoxFit.cover),
+                                  height: 100,
+                                  width: 100,
+
                                 ),
+                                // const CircleAvatar(
+                                //   radius: 60,
+                                //   backgroundImage: NetworkImage(
+                                //       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj8jG6wRlt4ftSCKawftxxgayByDUJG7W2JQ&s'),
+                                // ),
                                 Spacer(),
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Orange Juice',
+                                      prouductName[index],
                                       style: Styles.styleBold18,
                                     ),
                                     Text(
