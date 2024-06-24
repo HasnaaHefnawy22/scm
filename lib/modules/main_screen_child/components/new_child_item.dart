@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:scm/modules/teacher/homework.dart';
 
 import '../../../models/item_widget.dart';
+import '../../canteen_e_commerse/canteen_main_screen.dart';
 import '../../payment_Screens/payment_details.dart';
 import '../cubit/cubit.dart';
 import '../cubit/states.dart';
@@ -28,7 +30,12 @@ class NewChildItem extends StatelessWidget {
                 children: [
                   Expanded(
                       child: defultItem(
-                          onTTap: () {},
+                          onTTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeworkMainScreen()));
+                          },
                           title: "Homework",
                           img: "assets/images/homework.png")),
                   SizedBox(
@@ -36,7 +43,12 @@ class NewChildItem extends StatelessWidget {
                   ),
                   Expanded(
                       child: defultItem(
-                          onTTap: () {},
+                          onTTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CanteenMainScreen()));
+                          },
                           title: "Canteen",
                           img: "assets/images/fast-food.png")),
                   SizedBox(

@@ -4,6 +4,7 @@ import 'package:scm/modules/login/login_screen.dart';
 import 'package:scm/shared/bloc_observer.dart';
 import 'package:scm/shared/styles/color.dart';
 
+import 'modules/canteen_e_commerse/canteen_main_screen.dart';
 import 'modules/loading/loading_screen.dart';
 import 'modules/login_new/login_new.dart';
 import 'modules/main_screen_child/main_screen_child.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
           ),
           inputDecorationTheme: const InputDecorationTheme(
             filled: true,
-            fillColor: kPrimaryLightColor,
+            fillColor: kPrimarywhiteColor,
             iconColor: kPrimaryColor,
             prefixIconColor: kPrimaryColor,
             suffixIconColor: kPrimaryColor,
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
             ),
           )),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: CanteenMainScreen(),
     );
   }
 }
